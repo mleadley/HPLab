@@ -70,7 +70,12 @@ class CharacterContainer extends React.Component {
           `${character.name} is dead.`
         )
       }
-    
+
+    if(character.image){
+      characterFacts.push(
+        <img src={character.image} />
+      )
+    }
 
     this.setState({ currentCharacterFacts: characterFacts })
   }
